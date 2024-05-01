@@ -1,0 +1,46 @@
+:root {
+    --colorElms-100: rgb(0, 71, 49);
+    --colorElms-90: rgba(0, 71, 49, 0.9);
+    --colorElms-80: rgba(0, 71, 49, 0.8);
+    --colorElms-70: rgba(0, 71, 49, 0.7);
+    --colorElms-60: rgba(0, 71, 49, 0.6);
+}
+
+html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vw;
+    background-color: var(--colorElms-100);
+}
+
+/* Landing Page */
+#landing_main-section {
+    position: absolute;
+    top: 70px;
+    background-color: white;
+    height: auto;
+    padding-bottom: 50px;
+    width: 80vw;
+    max-width: 700px;
+    box-shadow: 5px 6px 5px rgba(0, 0, 0, 0.3);
+}
+
+#logo {
+    height: 50px
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--colorElms-100);
+    --bs-btn-border-color: 1px black;
+    --bs-btn-hover-bg: var(--colorElms-90);
+    --bs-btn-active-bg: var(--colorElms-90);
+}
+#landing_image {
+   position: relative;
+   top: -4px;
+   border-radius: 5px 5px 0 0;
+}
