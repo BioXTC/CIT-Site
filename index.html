@@ -17,9 +17,49 @@
 </head>
 
 <body>
-
-    <div class="text-center w-100">
-        <h1>Elms Department of Technology</h1>
+    <header>
+        <nav class="navbar fixed-top">
+            <div class="container-fluid">
+              
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+             <!--  <a class="navbar-brand" href="#">Offcanvas navbar</a>-->
+              <div class="offcanvas-md offcanvas-top" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5> 
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Faculty</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#programs_header">Programs</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#programs_header">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                          <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <div class="d-flex flex-column justify-content-center" id="pageTop">
+        <h1 class="text text-center">Elms Department of Technology</h1>
         <div class="d-flex justify-content-center">
             <p class="me-2">Graphic Design</p>
             <p class="me-2">Social Media</p>
@@ -32,72 +72,162 @@
         <div class="row w-75 d-flex justify-content-center">
             <div class="col-md-4">
                 <!-- Goose Avatar -->
-                <img class="d-block m-auto" src="assets/images/gosselin.gif" alt="goose gosselin">
+                <img class="d-block m-auto rounded" src="assets/images/gosselin.gif" alt="goose gosselin">
                 <h2 class="h3 text-center">Goose Gosselin </h2>
                 <p class="text-center text_black-70">
                     STEM Department Chair
                 </p>
-                <!-- Education/Contact Buttons Goose -->
+                <!-- Goose Tabs-->
                 <div class="d-flex justify-content-center">
-                    <button type="button" class="btn btn-sm btn-danger me-2" data-bs-toggle="popover"
-                        data-bs-title="Education"
-                        data-bs-content=" B.F.A., M.Ed., Ed.D., University of Massachusetts">Education</button>
-                    <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="popover" data-bs-title="Contact"
-                        data-bs-content="413-265-2216 | gosseling@elms.edu">Contact</button>
+                    <ul class="nav nav-underline" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                                aria-selected="true">About</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                aria-controls="profile-tab-pane" aria-selected="false">Education</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                data-bs-target="#contact-tab-pane" type="button" role="tab"
+                                aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+                        </li>
+                    </ul>
                 </div>
-                <p>
-                <h6 class="text-center">About</h6>
-                Dr. Gosselin is an educator, multimedia developer, and graphic artist. His research interests
-                include graphic user interface design, digital graphic design, perceptions of multimedia users, and
-                computer strategy & board game design.
-                </p>
-
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                        tabindex="0">
+                        <p class="p-3">
+                            Dr. Gosselin is an educator, multimedia developer, and graphic artist. His research
+                            interests
+                            include graphic user interface design, digital graphic design, perceptions of multimedia
+                            users, and
+                            computer strategy & board game design.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                        tabindex="0">
+                        <p class="p-3">
+                            B.F.A., M.Ed., Ed.D., University of Massachusetts
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
+                        tabindex="0">
+                        <p class="p-3">
+                            413-265-2216
+                            <br>
+                            gosseling@elms.edu
+                        </p>
+                    </div>
+                </div>
+                <!-- Goose tabs end-->
             </div>
+
             <div class="col-md-4">
                 <!-- Beryl Avatar -->
-                <img class="d-block m-auto" src="assets/images/hoffman.gif" alt="beryl hoffman">
+                <img class="d-block m-auto rounded" src="assets/images/hoffman.gif" alt="beryl hoffman">
                 <h2 class="h3 text-center">Beryl Hoffman</h2>
                 <p class="text-center text_black-70">
                     Associate Professor
                 </p>
-                <!-- Education/Contact Buttons Beryl -->
+                <!-- Beryl Tabs-->
                 <div class="d-flex justify-content-center">
-                    <button type="button" class="btn btn-sm btn-danger me-2" data-bs-toggle="popover"
-                        data-bs-title="Education"
-                        data-bs-content="B.A., Wellesley College, M.S.E., Ph.D. University of Pennsylvania">Education</button>
-                    <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="popover" data-bs-title="Contact"
-                        data-bs-content="413-265-2216 | hoffmanb@elms.edu">Contact</button>
+                    <ul class="nav nav-underline" id="goose_tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab2" data-bs-toggle="tab"
+                                data-bs-target="#home-tab-pane2" type="button" role="tab" aria-controls="home-tab-pane2"
+                                aria-selected="true">About</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="profile-tab2" data-bs-toggle="tab"
+                                data-bs-target="#profile-tab-pane2" type="button" role="tab"
+                                aria-controls="profile-tab-pane2" aria-selected="false">Education</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab2" data-bs-toggle="tab"
+                                data-bs-target="#contact-tab-pane2" type="button" role="tab"
+                                aria-controls="contact-tab-pane2" aria-selected="false">Contact</button>
+                        </li>
+                    </ul>
                 </div>
-                <p>
-                <h6 class="text-center">About</h6>
-                Dr. Hoffman's research interests include artificial intelligence, computational linguistics, and
-                educational technology..
-                </p>
+                <div class="tab-content" id="goose_tab-content">
+                    <div class="tab-pane fade show active" id="home-tab-pane2" role="tabpanel"
+                        aria-labelledby="home-tab2" tabindex="0">
+                        <p class="p-3">
+                            Dr. Hoffman's research interests include artificial intelligence, computational linguistics,
+                            and
+                            educational technology.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="profile-tab-pane2" role="tabpanel" aria-labelledby="profile-tab2"
+                        tabindex="0">
+                        <p class="p-3">
+                            B.A., Wellesley College, M.S.E., Ph.D. University of Pennsylvania
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="contact-tab-pane2" role="tabpanel" aria-labelledby="contact-tab2"
+                        tabindex="0">
+                        <p class="p-3">
+                            413-265-2216 | hoffmanb@elms.edu
+                        </p>
+                    </div>
+                </div>
+                <!-- Beryl tabs end-->
+             
             </div>
             <div class="col-md-4">
                 <!-- Laura Avatar -->
-                <img class="d-block m-auto" src="assets/images/coulombe.gif" alt="laura coulombe">
+                <img class="d-block m-auto rounded" src="assets/images/coulombe.gif" alt="laura coulombe">
                 <h2 class="h3 text-center">
                     Laura Coulombe</h2>
                 <p class="text-center text_black-70">
                     Adjunct Faculty
                 </p>
-                <!-- Education/Contact Buttons Laura -->
-                <div class="d-flex justify-content-center">
-                    <button type="button" class="btn btn-sm btn-danger me-2" data-bs-toggle="popover"
-                        data-bs-title="Education"
-                        data-bs-content="B.A., College of Our Lady of the Elms M.S., Bay Path College">Education</button>
-                    <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="popover" data-bs-title="Contact"
-                        data-bs-content="coulombel@elms.edu">Contact</button>
-                </div>
-
-                <p>
-                <h6 class="text-center">About</h6>
-                Laura Coulombe is a part time educator as well as a web and graphic designer. Her research interests
-                include the implications of social media in the business industry as well as continuing study into
-                the
-                evolving skills and techniques of the web, graphic and video game design industries.
-                </p>
+            <!-- Laura Tabs-->
+<div class="d-flex justify-content-center">
+    <ul class="nav nav-underline" id="goose_tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab3" data-bs-toggle="tab"
+                data-bs-target="#home-tab-pane3" type="button" role="tab" 
+                aria-controls="home-tab-pane3"
+                aria-selected="true">About</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab3" data-bs-toggle="tab"
+                data-bs-target="#profile-tab-pane3" type="button" role="tab"
+                aria-controls="profile-tab-pane3" aria-selected="false">Education</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab3" data-bs-toggle="tab"
+                data-bs-target="#contact-tab-pane3" type="button" role="tab"
+                aria-controls="contact-tab-pane3" aria-selected="false">Contact</button>
+        </li>
+    </ul>
+</div>
+<div class="tab-content" id="goose_tab-content">
+    <div class="tab-pane fade show active" id="home-tab-pane3" role="tabpanel" aria-labelledby="home-tab3" tabindex="0">
+        <p class="p-3">
+            Laura Coulombe is a part time educator as well as a web and graphic designer. Her research interests
+            include the implications of social media in the business industry as well as continuing study into
+            the
+            evolving skills and techniques of the web, graphic and video game design industries.
+        </p>
+    </div>
+    <div class="tab-pane fade" id="profile-tab-pane3" role="tabpanel" aria-labelledby="profile-tab3" tabindex="0">
+        <p class="p-3">
+            B.A., College of Our Lady of the Elms M.S., Bay Path College
+        </p>
+    </div>
+    <div class="tab-pane fade" id="contact-tab-pane3" role="tabpanel" aria-labelledby="contact-tab3" tabindex="0">
+        <p class="p-3">
+            coulombel@elms.edu
+        </p>
+    </div>
+</div>
+<!-- Laura tabs end-->
             </div>
         </div>
     </div>
@@ -121,12 +251,13 @@
     </div>
     <!-- Program Container -->
     <div class="container-fluid w-75">
+        <h2 class="text-center text_black-70 fs-1" id="programs_header">Programs</h2>
         <!-- CS/CIT Row -->
         <div class="row" id="row-1">
             <!-- <h2 class="text-center fs-1 mb-5" id="programs_header">Programs</h2> -->
             <div class="col-lg-6" id="row-1_col-1">
-                <img src="assets/images/icons/cs_icon.png" height="40" class="d-block m-auto mt-5">
-                <h2 class="text-center h5">Computer Science</h2>
+                <img src="assets/images/icons/cs_icon.png" height="50" class="d-block m-auto mt-5 mb-1">
+                <h2 class="text-center h5 responsive_underline">Computer Science</h2>
                 <p class="p-3">
                     The Computer Science major focuses on the design and development of software and the algorithms that
                     make code work efficiently. Computer Science majors at Elms College will become proficient in many
@@ -144,16 +275,16 @@
             </div>
 
             <div class="col-lg-6" id="row-1_col-2">
-                <img src="assets/images/icons/cit_icon.png" height="40" class="d-block m-auto mt-5">
-                <h2 class="text-center h5">Information Technology </h2>
+                <img src="assets/images/icons/cit_icon.png" height="50" class="d-block m-auto mt-5 mb-1">
+                <h2 class="text-center h5 responsive_underline">Information Technology </h2>
                 <p class=" p-3">
                     The Computer Information Technology & Security (CITS) major prepares students for careers as IT
                     professionals, providing a breadth of knowledge and the skills necessary to become IT technicians,
                     system administrators, network administrators, and cyber security specialists.
                 </p>
 
-               <!-- Button container CIT -->
-                <div class="text-center"> 
+                <!-- Button container CIT -->
+                <div class="text-center">
                     <!-- Learn More Button -->
                     <a href="https://getbootstrap.com/docs/5.3/components/buttons/"
                         class="btn btn-sm btn-outline-secondary" role="button">Learn more!</a>
@@ -165,10 +296,10 @@
 
         </div>
         <!-- GD/SM Row -->
-        <div class="row mt-5">
+        <div class="row">
             <div class="col-lg-6">
-                <img src="assets/images/icons/gd_icon.png" height="40" class="d-block m-auto mt-5">
-                <h2 class="text-center h5">Graphic Design</h2>
+                <img src="assets/images/icons/gd_icon.png" height="50" class="d-block m-auto mt-5 mb-1">
+                <h2 class="text-center h5 responsive_underline">Graphic Design</h2>
                 <p class="p-3">
                     We offer courses in graphic design, web design, digital illustration, imagery for business,
                     animation,
@@ -187,8 +318,8 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <img src="assets/images/icons/sm_icon.png" height="40" class="d-block m-auto mt-5">
-                <h2 class="text-center h5">Social Media</h2>
+                <img src="assets/images/icons/sm_icon.png" height="50" class="d-block m-auto mt-5 mb-1">
+                <h2 class="text-center h5 responsive_underline">Social Media</h2>
                 <p class="p-3">
                     Social media majors at Elms develop technical skills geared toward hands-on digital work. You'll
                     learn
@@ -215,6 +346,9 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
+    <footer>
+
+    </footer>
 </body>
 
 
