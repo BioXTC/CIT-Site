@@ -36,11 +36,12 @@ html {
 
 body {
     min-height: 100vw;
-    /* background-image: url("/assets/images/AdobeStock_437824508.jpeg"); 
-    background-position: center center;
+   background-image: url("/assets/images/background-darker-minimal.png"); 
+    background-position: cover;
+    background-size: 100vw;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    */
+    
     color: black;
     background-color: white;
 }
@@ -51,7 +52,7 @@ footer {
 
 /* Nav */
 .navbar {
-   
+
     padding-left: 1vw;
     padding-right: 1.5vw;
     width: 120px;
@@ -60,17 +61,34 @@ footer {
     --bs-navbar-toggler-icon-bg: white !important;
     --bs-navbar-toggler-border-color: rgba(0, 0, 0, 0.486);
 }
+
 .navbar-toggler {
     background-color: rgb(255, 255, 255) !important;
-    
+
 }
+
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
 
 /* Index */
+h1 {
+    font-size: 2rem;
+}
 
+#svg_logo {
+    display: block;
+    height: 50px;
+    margin: 0 auto;
+}
+
+#logo_expanded {
+    display: block;
+    margin: auto;
+    height: auto;
+    width: 40%;
+}
 
 /* Faculty */
 .nav {
@@ -79,21 +97,24 @@ footer {
     --bs-nav-link-padding-y: 0;
     --bs-nav-link-padding-x: 0;
 }
-.nav-underline {
-    --bs-nav-underline-gap: 1vw;
-    --bs-nav-underline-border-width: 2px;
-    --bs-nav-underline-link-active-color: var(var(--colorElms-100));
-}
 
+.nav-underline {
+    --bs-nav-underline-gap: 7px;
+    --bs-nav-underline-border-width: 2px;
+    --bs-nav-underline-link-active-color: var(--colorElms-100);
+}
+sl-avatar {
+    --size: 5rem;
+}
 /* Programs Section */
 #programs_header:after {
-    content: ""; 
+    content: "";
     display: block;
-    margin: 0 auto; 
-    width: 6vw; 
-    padding-top: 10px; 
+    margin: 0 auto;
+    width: 6vw;
+    padding-top: 10px;
     border-bottom: 3px solid rgba(0, 0, 0, 0.306);
-   
+
 }
 
 #cs_triangle {
@@ -121,24 +142,28 @@ footer {
 }
 
 /* Utility */
+.text-shadow {
+    text-shadow: 3px 3px rgba(4, 4, 4, 0.311);
+}
+
 .text_black-90 {
-    color: var(--colorBlack-90)
+    color: var(--colorBlack-90);
 }
 
 .text_black-80 {
-    color: var(--colorBlack-80)
+    color: var(--colorBlack-80);
 }
 
 .text_black-70 {
-    color: var(--colorBlack-70)
+    color: var(--colorBlack-70);
 }
 
 .text_black-60 {
-    color: var(--colorBlack-60)
+    color: var(--colorBlack-60);
 }
 
 .text_black-50 {
-    color: var(--colorBlack-50)
+    color: var(--colorBlack-50);
 }
 
 .parallax-1 {
@@ -209,11 +234,11 @@ footer {
 }
 
 .responsive_underline:after {
-    content: ""; 
+    content: "";
     display: block;
-    margin: 0 auto; 
-    width: 6vw; 
-    padding-top: 8px; 
+    margin: 0 auto;
+    width: 6vw;
+    padding-top: 8px;
     border-bottom: 3px solid rgba(0, 0, 0, 0.206);
 }
 
@@ -223,30 +248,164 @@ footer {
     transition: all 0.3s ease-out;
 }
 
+.roboto-thin {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.roboto-light {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-medium {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.roboto-black {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.roboto-thin-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.roboto-light-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.roboto-regular-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.roboto-medium-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.roboto-bold-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.roboto-black-italic {
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+
+.roboto-slab-custom {
+    font-family: "Roboto Slab";
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.space-mono-regular {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.space-mono-bold {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.space-mono-regular-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.space-mono-bold-italic {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.MyriadPro-Regular {
+    font-family: "myriad-pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.inter-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+.inter-bold {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+  }
+
+
 @media screen and (min-width: 750px) {
     .navbar-toggler {
         display: none;
     }
+
     .navbar-toggler-icon {
         display: block !important;
         margin: 0 auto !;
     }
+
     .navbar {
-       
+
         background-color: white !important;
     }
 }
 
 @media screen and (max-width: 750px) {
- 
+
     .navbar-toggler {
         display: flex !important;
         justify-content: center !important;
     }
+
     .navbar {
-       width: 100%;
+        width: 100%;
         background-color: rgb(116, 116, 116) !important;
     }
+
     #pageTop {
         margin-top: 65px;
     }

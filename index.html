@@ -5,75 +5,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!--Fonts/Icons-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
 
+    <script src="https://kit.fontawesome.com/dc06a9162b.js" crossorigin="anonymous"></script>
+    <!-- Shoelace CSS/JS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css" />
     <script type="module"
         src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/shoelace-autoloader.js"></script>
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Custom CSS/JS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="https://kit.fontawesome.com/dc06a9162b.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </head>
 
-<body>
+<body class="inter-regular">
     <header>
         <nav class="navbar fixed-top">
             <div class="container-fluid">
-              
-              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-             <!--  <a class="navbar-brand" href="#">Offcanvas navbar</a>-->
-              <div class="offcanvas-md offcanvas-top" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5> 
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!--  <a class="navbar-brand" href="#">Offcanvas navbar</a>-->
+                <div class="offcanvas-md offcanvas-top" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Faculty</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#programs_header">Programs</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#programs_header">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
                 </div>
-                <div class="offcanvas-body">
-                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Faculty</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#programs_header">Programs</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#programs_header">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                          <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                  
-                </div>
-              </div>
             </div>
-          </nav>
+        </nav>
     </header>
-    <div class="d-flex flex-column justify-content-center" id="pageTop">
-        <h1 class="text text-center">Elms Department of Technology</h1>
-        <div class="d-flex justify-content-center">
-            <p class="me-2">Graphic Design</p>
-            <p class="me-2">Social Media</p>
-            <p class="me-2">Computer Science</p>
-            <p class="me-2">Information Technology</p>
-        </div>
+    <div class="container-fluid flex-column justify-content-center mt-5" id="pageTop">
+        <!-- <img src="assets/images/icons/cs_icon.png">
+        <img src="assets/images/icons/gd_icon.png">
+        <img src="assets/images/icons/cit_icon.png">
+        <img src="assets/images/icons/sm_icon.png"> -->
+        <h1 class="text-center space-mono-bold text_black-80 mb-5">Elms Department of Technology</h1>
     </div>
-    <h2 class="text-center mb-4" id="faculty_header">Meet the Faculty</h2>
+    <!-- <h2 class="text-center mb-4 inter-bold opacity-75" id="faculty_header">Meet the Faculty</h2> -->
     <div class="container-fluid d-flex justify-content-center">
         <div class="row w-75 d-flex justify-content-center">
             <div class="col-md-4">
                 <!-- Goose Avatar -->
                 <img class="d-block m-auto rounded" src="assets/images/gosselin.gif" alt="goose gosselin">
-                <h2 class="h3 text-center">Goose Gosselin </h2>
+                <h2 class="h3 text-center inter-bold opacity-75">Goose Gosselin </h2>
                 <p class="text-center text_black-70">
                     STEM Department Chair
                 </p>
@@ -129,7 +140,7 @@
             <div class="col-md-4">
                 <!-- Beryl Avatar -->
                 <img class="d-block m-auto rounded" src="assets/images/hoffman.gif" alt="beryl hoffman">
-                <h2 class="h3 text-center">Beryl Hoffman</h2>
+                <h2 class="h3 text-center inter-bold opacity-75">Beryl Hoffman</h2>
                 <p class="text-center text_black-70">
                     Associate Professor
                 </p>
@@ -176,58 +187,62 @@
                     </div>
                 </div>
                 <!-- Beryl tabs end-->
-             
+
             </div>
             <div class="col-md-4">
                 <!-- Laura Avatar -->
                 <img class="d-block m-auto rounded" src="assets/images/coulombe.gif" alt="laura coulombe">
-                <h2 class="h3 text-center">
+                <h2 class="h3 text-center inter-bold text_black-70">
                     Laura Coulombe</h2>
                 <p class="text-center text_black-70">
                     Adjunct Faculty
                 </p>
-            <!-- Laura Tabs-->
-<div class="d-flex justify-content-center">
-    <ul class="nav nav-underline" id="goose_tab" role="tablist">
-        <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="home-tab3" data-bs-toggle="tab"
-                data-bs-target="#home-tab-pane3" type="button" role="tab" 
-                aria-controls="home-tab-pane3"
-                aria-selected="true">About</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="profile-tab3" data-bs-toggle="tab"
-                data-bs-target="#profile-tab-pane3" type="button" role="tab"
-                aria-controls="profile-tab-pane3" aria-selected="false">Education</button>
-        </li>
-        <li class="nav-item" role="presentation">
-            <button class="nav-link" id="contact-tab3" data-bs-toggle="tab"
-                data-bs-target="#contact-tab-pane3" type="button" role="tab"
-                aria-controls="contact-tab-pane3" aria-selected="false">Contact</button>
-        </li>
-    </ul>
-</div>
-<div class="tab-content" id="goose_tab-content">
-    <div class="tab-pane fade show active" id="home-tab-pane3" role="tabpanel" aria-labelledby="home-tab3" tabindex="0">
-        <p class="p-3">
-            Laura Coulombe is a part time educator as well as a web and graphic designer. Her research interests
-            include the implications of social media in the business industry as well as continuing study into
-            the
-            evolving skills and techniques of the web, graphic and video game design industries.
-        </p>
-    </div>
-    <div class="tab-pane fade" id="profile-tab-pane3" role="tabpanel" aria-labelledby="profile-tab3" tabindex="0">
-        <p class="p-3">
-            B.A., College of Our Lady of the Elms M.S., Bay Path College
-        </p>
-    </div>
-    <div class="tab-pane fade" id="contact-tab-pane3" role="tabpanel" aria-labelledby="contact-tab3" tabindex="0">
-        <p class="p-3">
-            coulombel@elms.edu
-        </p>
-    </div>
-</div>
-<!-- Laura tabs end-->
+                <!-- Laura Tabs-->
+                <div class="d-flex justify-content-center">
+                    <ul class="nav nav-underline" id="goose_tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="home-tab3" data-bs-toggle="tab"
+                                data-bs-target="#home-tab-pane3" type="button" role="tab" aria-controls="home-tab-pane3"
+                                aria-selected="true">About</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="profile-tab3" data-bs-toggle="tab"
+                                data-bs-target="#profile-tab-pane3" type="button" role="tab"
+                                aria-controls="profile-tab-pane3" aria-selected="false">Education</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="contact-tab3" data-bs-toggle="tab"
+                                data-bs-target="#contact-tab-pane3" type="button" role="tab"
+                                aria-controls="contact-tab-pane3" aria-selected="false">Contact</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="goose_tab-content">
+                    <div class="tab-pane fade show active" id="home-tab-pane3" role="tabpanel"
+                        aria-labelledby="home-tab3" tabindex="0">
+                        <p class="p-3">
+                            Laura Coulombe is a part time educator as well as a web and graphic designer. Her research
+                            interests
+                            include the implications of social media in the business industry as well as continuing
+                            study into
+                            the
+                            evolving skills and techniques of the web, graphic and video game design industries.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="profile-tab-pane3" role="tabpanel" aria-labelledby="profile-tab3"
+                        tabindex="0">
+                        <p class="p-3">
+                            B.A., College of Our Lady of the Elms M.S., Bay Path College
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="contact-tab-pane3" role="tabpanel" aria-labelledby="contact-tab3"
+                        tabindex="0">
+                        <p class="p-3">
+                            coulombel@elms.edu
+                        </p>
+                    </div>
+                </div>
+                <!-- Laura tabs end-->
             </div>
         </div>
     </div>
@@ -346,9 +361,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
-    <footer>
-
-    </footer>
+   
 </body>
 
 
