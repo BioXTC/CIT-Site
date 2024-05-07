@@ -35,7 +35,7 @@ html {
 
 body {
   min-height: 100vw;
-  background-image: url("/assets/images/background-darker-minimal.png");
+  background-image: url("/assets/images/background-darker-minimal-lq.webp");
   background-position: fill;
   background-size: 100vw;
   background-attachment: fixed;
@@ -89,8 +89,23 @@ footer {
 /* Nav */
 .dropdown-menu {
   --bs-dropdown-border-color: transparent;
+  --bs-dropdown-bg: rgba(255, 255, 255, 0.95);
+  --bs-dropdown-link-color: rgba(0, 0, 0, 1);
+  backdrop-filter: blur(10px);
+  --bs-dropdown-link-hover-bg: rgba(0, 0, 0, 0.75);
+  --bs-dropdown-link-hover-color: rgba(255, 255, 255, 1);
+  --bs-dropdown-link-active-bg: rgb(113, 113, 113);
+  max-width: fit-content;
+
+}
+.dropdown-item:hover {
+  box-shadow: 0 3px 8px rgb(0 0 0 / 0.4) !important;
+ 
 }
 
+a:hover svg {
+  stroke: white !important;
+}
 .navbar {
   padding-left: 0.5vw;
   padding-right: 1.5vw;
@@ -100,6 +115,7 @@ footer {
   --bs-navbar-toggler-icon-bg: rgba(194, 11, 11, 0) !important;
   --bs-navbar-toggler-border-color: rgba(0, 0, 0, 0);
   --bs-navbar-hover-color: black;
+
 }
 
 .navbar-toggler {
@@ -163,11 +179,11 @@ sl-avatar {
 
 .parallax-1 {
   position: relative;
-  background-image: url("/assets/images/web_design-bg-3.png");
+  background-image: url("/assets/images/parallax_image_lq.webp");
   background-attachment: fixed;
   background-position: center;
   background-repeat: repeat;
-  background-size: 110%;
+  background-size: 150%;
   min-height: 400px;
   z-index: -2;
 }
@@ -274,7 +290,7 @@ sl-avatar {
     width: fit-content;
     padding-right: 0;
     border-radius: 0 0 5px;
-    background-color: rgba(255, 255, 255, 0.95) !important;
+    background-color: rgba(255, 255, 255, 0.90) !important;
   }
 
   .navbar-nav {
@@ -297,13 +313,16 @@ sl-avatar {
 
   .navbar {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.9) !important;
+    background-color: rgba(255, 255, 255, 0.95) !important;
   }
 
   #programs_header {
     padding-top: 10vw !important;
   }
 
+  h1 {
+    padding-top: 2vw;
+  }
 }
 
 /* Custom Nav Toggler */
