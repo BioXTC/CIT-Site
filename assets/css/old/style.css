@@ -151,6 +151,10 @@ h1 {
   
 }
 
+sl-avatar {
+  --size: 5rem;
+}
+
 
 /* Utility */
 .text_black-90 {
@@ -163,6 +167,10 @@ h1 {
 
 .text_black-70 {
   color: var(--colorBlack-70);
+}
+
+.text_black-60 {
+  color: var(--colorBlack-60);
 }
 
 .text_black-50 {
@@ -231,9 +239,33 @@ h1 {
   border-bottom: 3px solid rgba(0, 0, 0, 0.206);
 }
 
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .space-mono-bold {
   font-family: "Space Mono", monospace;
   font-weight: 700;
+  font-style: normal;
+}
+
+.space-mono-regular-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.space-mono-bold-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.MyriadPro-Regular {
+  font-family: "myriad-pro", sans-serif;
+  font-weight: 400;
   font-style: normal;
 }
 
