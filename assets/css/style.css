@@ -44,7 +44,6 @@ body {
   background-color: white;
 }
 
-
 /* Footer */
 footer {
   height: 100px;
@@ -103,8 +102,12 @@ footer {
  
 }
 
-a:hover svg {
+li > a:hover svg {
   stroke: white !important;
+}
+#chevron:hover {
+  stroke: rgb(0, 0, 0) !important;
+  stroke-width: 0.2px;
 }
 .navbar {
   padding-left: 0.5vw;
@@ -126,9 +129,16 @@ a:hover svg {
 
 /* Index */
 h1 {
-  font-size: 2.5rem;
+  font-size: 4vmax;
 }
 
+div > p {
+  font-size: max(0.8vw, 16px);
+}
+
+h2 {
+  font-size: max(1vw, 20px);
+}
 
 /* Faculty */
 #faculty {
@@ -271,7 +281,10 @@ h1 {
     flex-direction: column;
   }
   h1 {
-    font-size: 3rem;
+    font-size: 46px;
+   
+    font-size: 3vw; 
+   
   }
 
 }
@@ -282,10 +295,6 @@ h1 {
   .navbar {
     width: 100%;
     background-color: rgba(255, 255, 255, 0.95) !important;
-  }
-
-  #programs_header {
-    padding-top: 10vw !important;
   }
 
   h1 {

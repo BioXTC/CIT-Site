@@ -42,6 +42,7 @@ body {
   background-repeat: no-repeat;
   color: black;
   background-color: white;
+ 
 }
 
 
@@ -104,7 +105,7 @@ footer {
 }
 
 a:hover svg {
-  stroke: white !important;
+  stroke: rgb(10, 10, 10) !important;
 }
 .navbar {
   padding-left: 0.5vw;
@@ -316,9 +317,7 @@ sl-avatar {
     background-color: rgba(255, 255, 255, 0.95) !important;
   }
 
-  #programs_header {
-    padding-top: 10vw !important;
-  }
+
 
   h1 {
     padding-top: 2vw;
