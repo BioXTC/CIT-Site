@@ -34,7 +34,7 @@ html {
 }
 
 body {
-  min-height: 100vw;
+  min-height: 100vh;
   background-image: url("/assets/images/background-darker-minimal-lq.webp");
   background-position: fill;
   background-size: 100vw;
@@ -44,10 +44,13 @@ body {
   background-color: white;
 }
 
+main {
+  flex: 1;
+}
+
 /* Footer */
 footer {
-  height: 100px;
-  margin-top: 20vw;
+  min-height: 100px;
   background-color: transparent;
 }
 
@@ -70,7 +73,6 @@ footer {
     margin-left: 20px;
   }
 }
-
 
 #facebook:hover {
   fill: #316FF6 !important;
@@ -97,18 +99,30 @@ footer {
   max-width: fit-content;
 
 }
+
 .dropdown-item:hover {
   box-shadow: 0 3px 8px rgb(0 0 0 / 0.4) !important;
- 
+
 }
 
-li > a:hover svg {
+li>a:hover svg {
   stroke: white !important;
 }
+
+.right_triangle {
+  fill: var(--colorBlack-70);
+}
+
+li>a:hover .right_triangle {
+  fill: white !important;
+}
+
+
 #chevron:hover {
   stroke: rgb(0, 0, 0) !important;
   stroke-width: 0.2px;
 }
+
 .navbar {
   padding-left: 0.5vw;
   padding-right: 1.5vw;
@@ -118,7 +132,6 @@ li > a:hover svg {
   --bs-navbar-toggler-icon-bg: rgba(194, 11, 11, 0) !important;
   --bs-navbar-toggler-border-color: rgba(0, 0, 0, 0);
   --bs-navbar-hover-color: black;
-
 }
 
 .navbar-toggler {
@@ -126,13 +139,16 @@ li > a:hover svg {
   border: 0 !important;
 }
 
+#ds_rightTriangle {
+  margin-bottom: 2px;
+}
 
 /* Index */
 h1 {
   font-size: 4vmax;
 }
 
-div > p {
+div>p {
   font-size: max(0.8vw, 16px);
 }
 
@@ -140,9 +156,15 @@ h2 {
   font-size: max(1vw, 20px);
 }
 
+
 /* Faculty */
-#faculty {
+#faculty_container {
   margin-bottom: 5vw;
+}
+
+#faculty_header {
+  font-size: max(3vw, 54px);
+  margin-bottom: 75px;
 }
 
 .nav {
@@ -158,7 +180,6 @@ h2 {
   --bs-nav-underline-gap: 0.4rem;
   --bs-nav-underline-border-width: 4px;
   --bs-nav-underline-link-active-color: var(--colorBlack-70);
-  
 }
 
 
@@ -231,19 +252,24 @@ h2 {
   fill: #ffffff;
 }
 
-
 .responsive_underline:after {
   content: "";
   display: block;
   margin: 0 auto;
-  width: 5vw;
+  width: 5vmax;
   padding-top: 8px;
-  border-bottom: 3px solid rgba(0, 0, 0, 0.206);
+  border-bottom: 3px solid rgba(0, 0, 0, 0.7);
 }
 
 .space-mono-bold {
   font-family: "Space Mono", monospace;
   font-weight: 700;
+  font-style: normal;
+}
+
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -280,15 +306,13 @@ h2 {
     display: flex;
     flex-direction: column;
   }
+
   h1 {
     font-size: 46px;
-   
-    font-size: 3vw; 
-   
+    font-size: 3.5vw;
   }
 
 }
-
 
 @media screen and (max-width: 1200px) {
 
